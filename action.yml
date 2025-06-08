@@ -28,6 +28,7 @@ runs:
       run:
         deno run
         --allow-env=NODE_V8_COVERAGE,JEST_WORKER_ID,GITHUB_OUTPUT
+        --allow-read=/home/runner/work/_temp/_runner_file_commands
         src/main.ts
         ${{ inputs.trim-tail-dot-vim == 'true' && '--trim-tail-dot-vim' || '' }} ${{ github.repository }}
       shell: bash
