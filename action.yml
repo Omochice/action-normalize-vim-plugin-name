@@ -26,7 +26,8 @@ runs:
     - uses: denoland/setup-deno@v2
     - id: name
       run:
-        deno run src/main.ts
+        deno run
         --allow-env=NODE_V8_COVERAGE,JEST_WORKER_ID,GITHUB_EVENT_PATH,GITHUB_EVENT_NAME,GITHUB_SHA,GITHUB_REF,GITHUB_WORKFLOW,GITHUB_ACTION,GITHUB_ACTOR,GITHUB_JOB,GITHUB_RUN_NUMBER,GITHUB_RUN_ID,GITHUB_SERVER_URL,GITHUB_GRAPHQL_URL,no_proxy,NO_PROXY,https_proxy,HTTPS_PROXY
+        src/main.ts
         ${{ inputs.trim-tail-dot-vim == 'true' && '--trim-tail-dot-vim' || '' }} ${{ github.repository }}
       shell: bash
