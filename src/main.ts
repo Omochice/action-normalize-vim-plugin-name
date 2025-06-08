@@ -19,8 +19,6 @@ const main = (args: string[]) => {
     Deno.exit(1);
   }
   debug(target);
-  // const stripDotVim =
-  //   getInput("trim-tail-dot-vim", { required: false }) === "true";
   const stripDotVim = a["trim-tail-dot-vim"];
   if (stripDotVim) {
     info(`You specify trim-tail-dot-vim.`);
