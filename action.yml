@@ -27,5 +27,5 @@ runs:
     - run: echo ${{ inputs.trim-tail-dot-vim == 'false' }}
       shell: bash
     - id: name
-      run: deno run --allow-all src/main.ts ${{ inputs.trim-tail-dot-vim == 'false' && '' || '--trim-tail-dot-vim' }} ${{ github.repository }}
+      run: deno run --allow-all src/main.ts ${{ inputs.trim-tail-dot-vim == 'true' && '--trim-tail-dot-vim' || '' }} ${{ github.repository }}
       shell: bash
