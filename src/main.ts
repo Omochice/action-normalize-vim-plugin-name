@@ -1,5 +1,5 @@
 import { debug, getInput, info, setOutput } from "npm:@actions/core@1.10.1";
-import { context } from "npm:@actions/github@6.0.0";
+import { context } from "npm:@actions/github@6.0.1";
 import { normalize, trimTailDotVim } from "./normalize.ts";
 
 const main = () => {
