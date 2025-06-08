@@ -91,7 +91,7 @@
             ''
               renovate-config-validator renovate.json5
             ''
-            |> runAs "check-renovate-config" [ pkgs.renovate-config-validator ];
+            |> runAs "check-renovate-config" [ pkgs.renovate ];
           check-deno =
             ''
               deno task check
