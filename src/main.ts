@@ -1,5 +1,4 @@
 import { debug, error, info, setOutput } from "npm:@actions/core@1.10.1";
-import { context } from "npm:@actions/github@6.0.0";
 import { normalize, trimTailDotVim } from "./normalize.ts";
 import { parseArgs } from "jsr:@std/cli@1.0.19/parse-args";
 
@@ -27,8 +26,8 @@ const main = (args: string[]) => {
     info(`You specify trim-tail-dot-vim.`);
   }
   const normalized = stripDotVim
-    ? trimTailDotVim(normalize(context.repo.repo))
-    : normalize(context.repo.repo);
+    ? trimTailDotVim(normalize(target))
+    : normalize(target);
   info("Complete main process");
   debug(`normalized is "${normalized}"`);
   setOutput("normalizedName", normalized);
