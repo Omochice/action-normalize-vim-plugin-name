@@ -18,7 +18,12 @@ inputs:
 outputs:
   normalizedName:
     description: 'Normalized plugin name'
+    value: ${{ steps.name.normalizedName }}
 
 runs:
-  using: node20
-  main: dist/main.js
+  using: composite
+  steps:
+    - uses: denoland/setup-deno@v2
+    - id: name
+      run: deno run src/main.ts
+      shell: bash
