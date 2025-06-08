@@ -25,5 +25,5 @@ runs:
   steps:
     - uses: denoland/setup-deno@v2
     - id: name
-      run: deno run --allow-all src/main.ts ${{ inputs.trimtail-dot-vim == "false" && "" || "--trim-tail-dot-vim" }} ${{ github.repository }}
+      run: deno run --allow-all src/main.ts ${{ inputs.trimtail-dot-vim == 'false' && '' || '--trim-tail-dot-vim' }} ${{ github.repository }}
       shell: bash
