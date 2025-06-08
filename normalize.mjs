@@ -8,9 +8,9 @@
  * Note: Default pattern is reference to https://github.com/Shougo/dein.vim/blob/5985e18b12a9d9e0ecd1747e64da2fa384abb18c/autoload/dein/parse.vim#L94
  */
 export function normalize(
-  rawName: string,
+  rawName,
   pattern = String.raw`^(n?vim|dps|denops)[_-]|[_-]n?vim$`,
-): string {
+) {
   const replacePattern = new RegExp(pattern, "g");
   return rawName.replaceAll(replacePattern, "");
 }
@@ -21,6 +21,6 @@ export function normalize(
  * @param rawName Raw plugin name that maybe included `.vim` pattern
  * @returns The trimed one
  */
-export function trimTailDotVim(rawName: string): string {
+export function trimTailDotVim(rawName) {
   return rawName.replace(/\.+n?vim$/, "");
 }

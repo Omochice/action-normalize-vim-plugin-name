@@ -1,6 +1,6 @@
-import { debug, getInput, info, setOutput } from "npm:@actions/core@1.10.1";
-import { context } from "npm:@actions/github@6.0.0";
-import { normalize, trimTailDotVim } from "./normalize.ts";
+import { debug, getInput, info, setOutput } from "@actions/core";
+import { context } from "@actions/github";
+import { normalize, trimTailDotVim } from "./normalize";
 
 const main = () => {
   info("Start main process");
