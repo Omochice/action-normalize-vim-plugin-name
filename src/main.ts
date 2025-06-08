@@ -1,4 +1,4 @@
-import { debug, error, info, setOutput } from "npm:@actions/core@1.10.1";
+import { debug, error, info, setOutput } from "npm:@actions/core@1.11.1";
 import { normalize, trimTailDotVim } from "./normalize.ts";
 import { parseArgs } from "jsr:@std/cli@1.0.19/parse-args";
 
