@@ -69,6 +69,6 @@ jobs:
       - check-deno
       - dog-fooding
     permissions: {}
-    if: failure()
+    if: ${{ failure() }}
     steps:
       - run: exit 1
