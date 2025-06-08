@@ -18,7 +18,7 @@ inputs:
 outputs:
   normalizedName:
     description: 'Normalized plugin name'
-    value: ${{ steps.name.normalizedName }}
+    value: ${{ steps.name.outputs.normalizedName }}
 
 runs:
   using: composite
