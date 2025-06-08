@@ -25,5 +25,5 @@ runs:
   steps:
     - uses: denoland/setup-deno@v2
     - id: name
-      run: deno run src/main.ts
+      run: deno run --allow-all src/main.ts
       shell: bash
