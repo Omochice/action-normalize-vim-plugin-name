@@ -13,6 +13,10 @@ inputs:
     description: "Whether trim tail '.vim' pattern"
     required: false
     default: "false"
+  plugin-name:
+    description: "Plugin name"
+    required: false
+    default: ${{ github.event.repository.name }}
 
 # Define your outputs here.
 outputs:
@@ -25,5 +29,5 @@ runs:
   steps:
     - uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
     - id: name
-      run: deno run --allow-env=NODE_V8_COVERAGE,JEST_WORKER_ID,GITHUB_OUTPUT --allow-read=/home/runner/work/_temp/_runner_file_commands --allow-write=/home/runner/work/_temp/_runner_file_commands src/main.ts ${{ inputs.trim-tail-dot-vim == 'true' && '--trim-tail-dot-vim' || '' }} ${{ github.repository }}
+      run: deno run --allow-env=NODE_V8_COVERAGE,JEST_WORKER_ID,GITHUB_OUTPUT --allow-read=/home/runner/work/_temp/_runner_file_commands --allow-write=/home/runner/work/_temp/_runner_file_commands src/main.ts ${{ inputs.trim-tail-dot-vim == 'true' && '--trim-tail-dot-vim' || '' }} ${{ inputs.plugin-name }}
       shell: bash
