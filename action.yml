@@ -27,7 +27,7 @@ outputs:
 runs:
   using: composite
   steps:
-    - uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
+    - uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
     - id: name
       run: deno run --allow-env=NODE_V8_COVERAGE,JEST_WORKER_ID,GITHUB_OUTPUT --allow-read=/home/runner/work/_temp/_runner_file_commands --allow-write=/home/runner/work/_temp/_runner_file_commands src/main.ts ${{ inputs.trim-tail-dot-vim == 'true' && '--trim-tail-dot-vim' || '' }} ${{ inputs.plugin-name }}
       shell: bash
