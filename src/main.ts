@@ -1,6 +1,6 @@
 import { debug, error, info, setOutput } from "npm:@actions/core@1.11.1";
 import { normalize, trimTailDotVim } from "./normalize.ts";
-import { parseArgs } from "jsr:@std/cli@1.0.31/parse-args";
+import { parseArgs } from "jsr:@std/cli@1.0.32/parse-args";
 
 const main = (args: string[]) => {
   info("Start main process");
